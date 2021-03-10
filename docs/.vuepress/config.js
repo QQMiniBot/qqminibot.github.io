@@ -10,14 +10,24 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '指南', link: '/Guide/' },
-            { text: 'API', link: '/API/ '},
-            { text: '事件', link: '/Event/ '}
+            { text: 'API', link: '/API/'},
+            { text: '事件', link: '/Event/'}
         ],
-        sidebar: [
-            '/Guide/',
-            '/Require/',
-            '/Setup/'
-        ],
+        sidebar: {
+            '/Guide/': [
+                '/Guide/',
+                '/Guide/Require/',
+                '/Guide/Setup/',
+                '/Guide/Code/',
+                '/Guide/Deploy/',
+                '/Guide/AddWindow/',
+                '/Guide/Update/',
+                '/Guide/Debug/'
+            ],
+            '/API/':[
+                '/API/'
+            ]
+        },
         displayAllHeaders: true,
         activeHeaderLinks: true
     }
