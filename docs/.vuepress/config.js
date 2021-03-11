@@ -14,20 +14,33 @@ module.exports = {
             { text: '事件', link: '/Event/'}
         ],
         sidebar: {
-            '/Guide/': [
-                '/Guide/',
-                '/Guide/Require/',
-                '/Guide/Setup/',
-                '/Guide/Code/',
-                '/Guide/Deploy/',
-                '/Guide/AddWindow/',
-                '/Guide/Update/',
-                '/Guide/Debug/'
-            ],
+            '/Guide/':[{
+                title: '指南',
+                collapsable: false,
+                sidebarDepth: -1,
+                children: [
+                    '/Guide/',
+                    '/Guide/Require/',
+                    '/Guide/Setup/',
+                    '/Guide/Code/',
+                    '/Guide/Deploy/',
+                    '/Guide/AddWindow/',
+                    '/Guide/Update/',
+                    '/Guide/Debug/'
+                ]
+            }],
             '/API/':[
                 '/API/'
-            ]
+            ],
+            '/Event/':[ {
+                title: '事件列表',
+                path: '/Event/',
+                collapsable: false,
+                sidebarDepth: 2
+            }]
         },
+        sidebarDepth: 2,
+        collapsable: true,
         displayAllHeaders: true,
         activeHeaderLinks: true
     }

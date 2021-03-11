@@ -7,7 +7,7 @@
 在使用 QQMini.PluginSDK 之前，建议开发者阅读以下资料，以便在后续的章节中快速理解所描述的内容，提高开发效率。
 
 - [用户协议](UserAgreement.md)
-- [下载安装](/Require/)
+- [下载安装](/Guide/Require/)
 - [插件机制](Readme.md)
 - [疑难解答]()
 
