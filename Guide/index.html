@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>简介 | QQMini.PluginSDK</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="QQMini.PluginSDK 开发文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.443403f7.css" as="style"><link rel="preload" href="/assets/js/app.73746a0f.js" as="script"><link rel="preload" href="/assets/js/2.36068e29.js" as="script"><link rel="preload" href="/assets/js/13.b83c4d13.js" as="script"><link rel="prefetch" href="/assets/js/10.2eeecffb.js"><link rel="prefetch" href="/assets/js/11.10f1e00b.js"><link rel="prefetch" href="/assets/js/12.3d5b35ad.js"><link rel="prefetch" href="/assets/js/14.91771d28.js"><link rel="prefetch" href="/assets/js/15.ba7e2a48.js"><link rel="prefetch" href="/assets/js/16.ee45f865.js"><link rel="prefetch" href="/assets/js/17.bc11b659.js"><link rel="prefetch" href="/assets/js/18.ce9ceae7.js"><link rel="prefetch" href="/assets/js/3.4f0c4de7.js"><link rel="prefetch" href="/assets/js/4.b9f699bc.js"><link rel="prefetch" href="/assets/js/5.0f2cc9a3.js"><link rel="prefetch" href="/assets/js/6.4723672f.js"><link rel="prefetch" href="/assets/js/7.c01443bf.js"><link rel="prefetch" href="/assets/js/8.d3d9278c.js"><link rel="prefetch" href="/assets/js/9.54960dae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.443403f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="QQMini.PluginSDK" class="logo"> <span class="site-name can-hide">QQMini.PluginSDK</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/Guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/API/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/Event/" class="nav-link">
+  事件
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/Guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/API/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/Event/" class="nav-link">
+  事件
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Guide/" aria-current="page" class="active sidebar-link">简介</a></li><li><a href="/Guide/Require/" class="sidebar-link">环境要求</a></li><li><a href="/Guide/Setup/" class="sidebar-link">项目搭建</a></li><li><a href="/Guide/Code/" class="sidebar-link">插件编写</a></li><li><a href="/Guide/Deploy/" class="sidebar-link">插件部署</a></li><li><a href="/Guide/AddWindow/" class="sidebar-link">添加窗体</a></li><li><a href="/Guide/Update/" class="sidebar-link">升级版本</a></li><li><a href="/Guide/Debug/" class="sidebar-link">插件调试</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h1> <p>通过 QQMini.PluginSDK，开发者可以快速、高效的在 QQMini 中开发稳定的插件，实现更多创新且实用的功能。在高效的同时，QQMini.PluginSDK 还支持依赖项打包等功能。为了能快速入门使用 QQMini.PluginSDK，本指南将带以 “复读机” 案例开发一款简易的小插件。</p> <h2 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h2> <ul><li><p>支持完整的 .NET 特性，通过中间层与QQMini深度集成，支持完整的异常处理，插件热拔插等</p></li> <li><p>支持与所有 .NET 项目进行交互</p></li> <li><p>支持依赖压缩打包（在完成编译后，将除已集成在QQMini中的库外，所有的依赖项将进行打包， 保证最终结果只有一个 DLL）</p></li> <li><p>支持 .NET 4.5 以上所有版本的开发（不含 .NET Core）</p></li> <li><p>支持 C#、VB.NET、F# 三种语言</p></li></ul> <h2 id="建议"><a href="#建议" class="header-anchor">#</a> 建议</h2> <p>在使用 QQMini.PluginSDK 之前，建议开发者阅读以下资料，以便在后续的章节中快速理解所描述的内容，提高开发效率。</p> <ul><li><a href="/Guide/UserAgreement.html">用户协议</a></li> <li><a href="/Guide/Require/">下载安装</a></li> <li><a href="/Guide/" aria-current="page" class="router-link-exact-active router-link-active">插件机制</a></li> <li><a href="">疑难解答</a></li></ul> <h2 id="加速访问"><a href="#加速访问" class="header-anchor">#</a> 加速访问</h2> <p>如果遇到各种不可抗力的原因，如: 图片裂开、下载速度慢、网页刷新久等。请在系统 Hosts 文件中加入下列条目以提升速度</p> <div class="language-text extra-class"><pre class="language-text"><code>192.30.253.112 github.com
+192.30.253.119 gist.github.com
+151.101.184.133 assets-cdn.github.com
+151.101.184.133 raw.githubusercontent.com
+151.101.184.133 gist.githubusercontent.com
+151.101.184.133 cloud.githubusercontent.com
+151.101.184.133 camo.githubusercontent.com
+151.101.184.133 avatars0.githubusercontent.com
+151.101.184.133 avatars1.githubusercontent.com
+151.101.184.133 avatars2.githubusercontent.com
+151.101.184.133 avatars3.githubusercontent.com
+151.101.184.133 avatars4.githubusercontent.com
+151.101.184.133 avatars5.githubusercontent.com
+151.101.184.133 avatars6.githubusercontent.com
+151.101.184.133 avatars7.githubusercontent.com
+151.101.184.133 avatars8.githubusercontent.com
+</code></pre></div><h2 id="关于打赏"><a href="#关于打赏" class="header-anchor">#</a> 关于打赏</h2> <p>您的支持是我更新的动力</p> <p><img src="/AliPay.png" alt=""> <img src="/wechatPay.png" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Guide/Require/">
+        环境要求
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.73746a0f.js" defer></script><script src="/assets/js/2.36068e29.js" defer></script><script src="/assets/js/13.b83c4d13.js" defer></script>
+  </body>
+</html>

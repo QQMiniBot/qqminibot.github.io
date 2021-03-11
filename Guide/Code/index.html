@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>插件编写 | QQMini.PluginSDK</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="QQMini.PluginSDK 开发文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.443403f7.css" as="style"><link rel="preload" href="/assets/js/app.73746a0f.js" as="script"><link rel="preload" href="/assets/js/2.36068e29.js" as="script"><link rel="preload" href="/assets/js/10.2eeecffb.js" as="script"><link rel="prefetch" href="/assets/js/11.10f1e00b.js"><link rel="prefetch" href="/assets/js/12.3d5b35ad.js"><link rel="prefetch" href="/assets/js/13.b83c4d13.js"><link rel="prefetch" href="/assets/js/14.91771d28.js"><link rel="prefetch" href="/assets/js/15.ba7e2a48.js"><link rel="prefetch" href="/assets/js/16.ee45f865.js"><link rel="prefetch" href="/assets/js/17.bc11b659.js"><link rel="prefetch" href="/assets/js/18.ce9ceae7.js"><link rel="prefetch" href="/assets/js/3.4f0c4de7.js"><link rel="prefetch" href="/assets/js/4.b9f699bc.js"><link rel="prefetch" href="/assets/js/5.0f2cc9a3.js"><link rel="prefetch" href="/assets/js/6.4723672f.js"><link rel="prefetch" href="/assets/js/7.c01443bf.js"><link rel="prefetch" href="/assets/js/8.d3d9278c.js"><link rel="prefetch" href="/assets/js/9.54960dae.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.443403f7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="QQMini.PluginSDK" class="logo"> <span class="site-name can-hide">QQMini.PluginSDK</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/Guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/API/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/Event/" class="nav-link">
+  事件
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/Guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/API/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/Event/" class="nav-link">
+  事件
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Guide/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Guide/Require/" class="sidebar-link">环境要求</a></li><li><a href="/Guide/Setup/" class="sidebar-link">项目搭建</a></li><li><a href="/Guide/Code/" aria-current="page" class="active sidebar-link">插件编写</a></li><li><a href="/Guide/Deploy/" class="sidebar-link">插件部署</a></li><li><a href="/Guide/AddWindow/" class="sidebar-link">添加窗体</a></li><li><a href="/Guide/Update/" class="sidebar-link">升级版本</a></li><li><a href="/Guide/Debug/" class="sidebar-link">插件调试</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="插件编写"><a href="#插件编写" class="header-anchor">#</a> 插件编写</h1> <p>本章节将继续完成 QQMini插件 “复读机” 的编写</p> <h2 id="步骤"><a href="#步骤" class="header-anchor">#</a> 步骤</h2> <p>1.使用 override 关键字，重写 OnReceiveMessage 事件，并调用接口发送消息。要查看 QQMini.PluginSDK 实现的事件列表，请阅读 <a href="/Event/">事件列表</a></p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name">QMEventHandlerTypes</span> OnReceiveGroupMessage <span class="token punctuation">(</span><span class="token class-name">QMGroupMessageEventArgs</span> e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QMApi<span class="token punctuation">.</span>SendGroupMessage <span class="token punctuation">(</span>e<span class="token punctuation">.</span>RobotQQ<span class="token punctuation">,</span> e<span class="token punctuation">.</span>FromGroup<span class="token punctuation">,</span> e<span class="token punctuation">.</span>Message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> QMEventHandlerTypes<span class="token punctuation">.</span>Continue<span class="token punctuation">;</span>	<span class="token comment">// 返回继续执行时, 后续的插件将会接收到此消息</span>
+<span class="token punctuation">}</span>
+</code></pre></div><details><summary>VB.NET</summary> <div class="language-vbnet extra-class"><pre class="language-vbnet"><code><span class="token keyword">Public</span> <span class="token keyword">Overrides</span> <span class="token keyword">Function</span> OnReceiveGroupMessage<span class="token punctuation">(</span>e <span class="token keyword">As</span> QMGroupMessageEventArgs<span class="token punctuation">)</span> <span class="token keyword">As</span> QMEventHandlerTypes
+ 	QMApi.SendGroupMessage<span class="token punctuation">(</span>e.RobotQQ<span class="token punctuation">,</span> e.FromGroup<span class="token punctuation">,</span> e.Message<span class="token punctuation">)</span>
+ 	<span class="token keyword">Return</span> QMEventHandlerTypes.<span class="token keyword">Continue</span> <span class="token comment">' 返回继续时, 后续的插件将会接收到此消息</span>
+ <span class="token keyword">End</span> <span class="token keyword">Function</span>
+</code></pre></div></details> <hr> <p>至此，“复读机” 插件的编写工作已经完毕。这时选中创建的项目，右键打开菜单，选择重新生成。如果没有弹出错误与警告。表示已经编译成功</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Guide/Setup/" class="prev">
+        项目搭建
+      </a></span> <span class="next"><a href="/Guide/Deploy/">
+        插件部署
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.73746a0f.js" defer></script><script src="/assets/js/2.36068e29.js" defer></script><script src="/assets/js/10.2eeecffb.js" defer></script>
+  </body>
+</html>
