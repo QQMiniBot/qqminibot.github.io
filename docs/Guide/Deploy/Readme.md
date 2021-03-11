@@ -12,7 +12,7 @@
 
 2.复制编译结果到 QQMini
 
-插件编译完成后，我们需要将编译好的 DLL 复制到 QQMini 下加载并运行。在此之前，请确保运行 QQMini 的电脑有安装插件对应的 .NET 运行库。需要下载请到 [环境要求](/Require/)
+插件编译完成后，我们需要将编译好的 DLL 复制到 QQMini 下加载并运行。在此之前，请确保运行 QQMini 的电脑有安装插件对应的 .NET 运行库。需要下载请到 [环境要求](/Guide/Require/)
 ![](/deploy/copyfile.png)
 
 3.运行 QQMini 测试插件
